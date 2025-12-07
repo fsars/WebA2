@@ -1,0 +1,138 @@
+/*WebApp Assignment1 
+Fatema Sarwar
+301245848
+October 13,2025*/
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+
+.app-root {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+/* centered navbar */
+navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 960px;
+  height: 64px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(40, 60, 80, 0.07);
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  z-index: 100;
+}
+
+/* Logo style*/
+navbar .logo {
+  margin-right: auto;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #113366;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+
+/* Navigation links container */
+navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation link styles */
+navbar ul li a {
+  text-decoration: none;
+  color: #1a2c48;
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.12s, color 0.18s;
+}
+
+navbar ul li a:hover,
+navbar ul li a:focus {
+  background: #e8f0fe;
+  color: #4a90e2;
+  outline: none;
+}
+
+/* content navbar */
+.page-container {
+  min-height: calc(100vh - 64px);
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 24px 16px 40px 16px;
+}
+
+/* heading styles */
+h1, h2, h3 {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #112144;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+/* Card for sections/content blocks */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(40, 60, 80, 0.11);
+  padding: 32px;
+  max-width: 700px;
+  margin: 28px auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  nav {
+    height: 56px;
+    padding: 0 12px;
+    border-radius: 0 0 10px 10px;
+  }
+  .page-container {
+    margin-top: 56px;
+    padding: 14px 4px 24px 4px;
+  }
+  .card {
+    padding: 16px;
+  }
+  nav ul {
+    gap: 16px;
+  }
+}
